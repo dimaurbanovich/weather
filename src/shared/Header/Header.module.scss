@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.change_theme {
+  margin-right: 20px;
+}
+
+.logo {
+  svg {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.change_theme {
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.title {
+  color: #4793ff;
+  font-size: 25;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
