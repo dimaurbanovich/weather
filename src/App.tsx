@@ -8,9 +8,6 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Link to="/">Home</Link>
-      <Link to="/month-statistics">Month Statistics</Link>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/month-statistics" element={<MonthStatistics />} />
