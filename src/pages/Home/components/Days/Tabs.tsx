@@ -19,7 +19,7 @@ const Tabs = (props: Props) => {
     <div className={s.tabs}>
       <div className={s.tabs_wrapper}>
         {tabs.map((tab) => (
-          <button className={s.tab} key={tab.value}>
+          <button className={`${s.tab} ${s.active}`} key={tab.value}>
             {tab.value}
           </button>
         ))}
