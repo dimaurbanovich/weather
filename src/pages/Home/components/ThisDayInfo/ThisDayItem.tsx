@@ -1,8 +1,8 @@
 import React from 'react';
-import IndicatorSvgSelector from '../../../../../assets/icons/indicators/IndicatorSvgSelector';
-import { IItem } from '../ThisDayInfo';
+import IndicatorSvgSelector from '../../../../assets/icons/indicators/IndicatorSvgSelector';
+import { IItem } from './ThisDayInfo';
 
-import s from '../ThisDayInfo.module.scss';
+import s from './ThisDayInfo.module.scss';
 
 interface Props {
   item: IItem;
