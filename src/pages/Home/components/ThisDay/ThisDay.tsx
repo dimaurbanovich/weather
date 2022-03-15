@@ -18,7 +18,9 @@ const ThisDay = (props: Props) => {
         <h2 className={s.time}>
           Время: <span>21:01</span>
         </h2>
-        <h2 className={s.city}>Минск</h2>
+        <h2 className={s.city}>
+          Город: <span>Минск</span>
+        </h2>
       </div>
     </div>
   );

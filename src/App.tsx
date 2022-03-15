@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/Home/Home';
 import MonthStatistics from './pages/MonthStatistics/MonthStatistics';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './shared/Header/Header';
 
 function App() {
