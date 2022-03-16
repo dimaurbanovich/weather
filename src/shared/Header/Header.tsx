@@ -3,6 +3,7 @@ import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector';
 import s from './Header.module.scss';
 import Select from 'react-select';
 import { useTheme } from '../../hooks/useTheme';
+import { Theme } from '../../context/themeContext';
 
 type Props = {};
 
@@ -15,11 +16,11 @@ const Header = (props: Props) => {
     { value: 'city-3', label: 'Брест ' },
   ];
 
-
   const colourStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: theme.theme === 'dark' ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
+      backgroundColor:
+        theme.theme === Theme.DARK ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
       width: '194px',
       height: '37px',
       border: 'none',
@@ -28,33 +29,13 @@ const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: theme.theme === 'dark' ? '#fff' : '#000',
+      color: theme.theme === Theme.DARK ? '#fff' : '#000',
     }),
   };
 
   const changeTheme = () => {
-
-    theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light');
+    theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
-
-  useEffect(() => {
-    const root = document.querySelector(':root') as HTMLElement;
-
-    const components = [
-      'body-background',
-      'components-background',
-      'card-background',
-      'card-shadow',
-      'text-color',
-    ];
-
-    components.forEach((component) => {
-      root.style.setProperty(
-        `--${component}-default`,
-        `var(--${component}-${theme.theme})`
-      );
-    });
-  }, [theme.theme]);
 
   return (
     <header className={s.header}>
