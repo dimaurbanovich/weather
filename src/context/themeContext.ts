@@ -1,3 +1,11 @@
 import { createContext } from "react";
 
-export const themeContext = createContext({})
+interface Props {
+    theme: string;
+    changeTheme: (theme: string) => void;
+}
+
+export const ThemeContext = createContext<Props>({
+    theme: '',
+    changeTheme: ()=>{},
+})
